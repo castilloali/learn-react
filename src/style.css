@@ -1,0 +1,52 @@
+body {
+    background-color: #1a1a1a;
+}
+.parnet {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0a0a0a;
+}
+.from {
+    width: 70%;
+    margin: auto;
+    
+}
+.from .form-row {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form-row .header{
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 0px 0 0px 6px;
+}
+.form-row #item {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    outline: none;
+    background: #00968878;
+    border-radius: 7px;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 7px;
+    border: solid 1px wheat;
+    outline: none;
+    background: #00968878;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.btn:focus {
+    border: solid 1px black;
+
+}
