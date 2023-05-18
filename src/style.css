@@ -1,15 +1,19 @@
 body {
     background-color: #1a1a1a;
 }
+
+
 .parnet {
     width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #0a0a0a;
 }
-.from {
+.from,
+.hold {
     width: 70%;
-    margin: auto;
+    margin: auto ;
+    margin-bottom: 10px;
     
 }
 .from .form-row {
@@ -20,7 +24,7 @@ body {
 
 }
 
-.form-row .header{
+.header{
     color: white;
     width: 100%;
     font-family: sans-serif;
@@ -48,5 +52,21 @@ body {
 
 .btn:focus {
     border: solid 1px black;
+
+}
+ul label {
+    color: white;
+    cursor: pointer;
+}
+
+
+ul .btn-danger{
+    width: 61px;
+    color: red;
+    border-color: red;
+    background: transparent;
+    border-radius: 7px;
+    margin-left: 7px;
+    cursor: pointer;
 
 }
