@@ -3,7 +3,8 @@
 
 
 import "./style.css"
-
+import rrr from "./Mm"
+console.log(rrr)
 export default function News() {
   return (
     <div className="parnet">
