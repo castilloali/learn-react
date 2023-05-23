@@ -1,17 +1,24 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function BasicExample(props) {
-    // console.log(props)
+function BasicExample({
+    onClick,
+    title,
+    description,
+    srcimg,children}) {
+    const printConsole=()=> {
+        return onClick(title)
+    }
     return (
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.srcimg} />
+        <Card.Img variant="top" src={srcimg} />
         <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
+            <Card.Title>{title}</Card.Title>
             <Card.Text>
-                {props.description}
+                {description}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Button onClick={printConsole}  variant="primary">Go somewhere</Button>
+            {children}
         </Card.Body>
         </Card>
     );

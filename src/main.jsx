@@ -18,13 +18,21 @@ const App = () => {
     {title:"title 3" , description:"description 3", srcimg:"/src/imgs/3.png"},
     {title:"title 4" , description:"description 4", srcimg:"/src/imgs/4.png"}
   ]
+
+
+  const passFunction = (message) => {
+    console.log("Castillo" + message)
+  }
   return(
     <div>
       <NavScrollExample/>
       {
         data.map((items) => {
           return(
-            <BasicExample title={items.title}  description={items.description} srcimg={items.srcimg}/>
+            <BasicExample onClick={passFunction} title={items.title}  description={items.description} srcimg={items.srcimg}> 
+            <h2>castillo</h2>
+            <p>lorem</p>
+            </BasicExample>
           )
         })
       }
