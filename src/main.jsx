@@ -11,6 +11,7 @@ import ReactDOM  from "react-dom"
 import NavScrollExample from "./bomponents/Navbar"
 import BasicExample from "./bomponents/CardDetals"
 import NotFound from "./bomponents/NotFound"
+import Form from "./bomponents/Form"
 
 const App = () => {
   const data=[
@@ -24,9 +25,15 @@ const App = () => {
   const passFunction = (message) => {
     console.log("Castillo" + message)
   }
+
+
+  const handelInput = (e) => {
+    console.log(e.target.value)
+  }
   return(
     <div>
       <NavScrollExample/>
+      <Form/>
       {
 
         data.length ? (
@@ -45,7 +52,7 @@ const App = () => {
         ) : (
 
           <NotFound message={"no tada found"} color="info"/>
-
+          
         )
 
 
