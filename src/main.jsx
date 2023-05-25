@@ -8,59 +8,28 @@
 
 import React  from "react"
 import ReactDOM  from "react-dom"
-import NavScrollExample from "./bomponents/Navbar"
-import BasicExample from "./bomponents/CardDetals"
-import NotFound from "./bomponents/NotFound"
-import Form from "./bomponents/Form"
+import Header from "./bomponents/Headers"
+import Body from "./bomponents/Bodyy"
+import Footer from "./bomponents/Footers"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 const App = () => {
-  const data=[
-    // {title:"title 1" , description:"description 1", srcimg:"/src/imgs/1.png"},
-    // {title:"title 2" , description:"description 2", srcimg:"/src/imgs/2.png"},
-    // {title:"title 3" , description:"description 3", srcimg:"/src/imgs/3.png"},
-    // {title:"title 4" , description:"description 4", srcimg:"/src/imgs/4.png"}
-  ]
+
+  return (
+        <div>
+
+          <Header />
+        <BrowserRouter>
+          <Routes>
+            <Route path="Body"  element={<Body />}/>
+            <Route path="Footer"  element={<Footer />}/>
+          </Routes>
 
 
-  const passFunction = (message) => {
-    console.log("Castillo" + message)
-  }
-
-
-  const handelInput = (e) => {
-    console.log(e.target.value)
-  }
-  return(
-    <div>
-      <NavScrollExample/>
-      <Form/>
-      {
-
-        data.length ? (
-
-          data.map((items) => {
-            return(
-              <BasicExample onClick={passFunction} title={items.title}  description={items.description} srcimg={items.srcimg}> 
-              <h2>castillo</h2>
-              <p>lorem</p>
-
-              </BasicExample>
-          )
-          })
-
-
-        ) : (
-
-          <NotFound message={"no tada found"} color="info"/>
-          
-        )
-
-
-
-      }
-    </div>
+        </BrowserRouter>
+      </div>
   )
-} 
+}
 
 ReactDOM.render(<App/>, document.getElementById("root"))
 
