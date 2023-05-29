@@ -8,25 +8,15 @@
 
 import React  from "react"
 import ReactDOM  from "react-dom"
-import Header from "./bomponents/Headers"
-import Body from "./bomponents/Bodyy"
-import Footer from "./bomponents/Footers"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Status from "./bomponents/Status"
+// import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+
 
 const App = () => {
-
   return (
         <div>
-
-          <Header />
-        <BrowserRouter>
-          <Routes>
-            <Route path="Body"  element={<Body />}/>
-            <Route path="Footer"  element={<Footer />}/>
-          </Routes>
-
-
-        </BrowserRouter>
+          <Status/>
       </div>
   )
 }
