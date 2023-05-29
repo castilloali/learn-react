@@ -1,15 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState , useEffect} from 'react'
 import { Button } from 'react-bootstrap'
 function Status() {
-    const [text, setText] =useState("castillo + ")
-    const handelInput=(e)=>{
-        setText(text + e.target.value)
-        console.log(text)
-    }
+    const [count,setCount]=useState(0)
+    useEffect(()=>{
+        console.log("ssss")
+    },[count])
     return (
         <div>
-            <input onChange={handelInput} value={text} type="text" />
-            <label >{text}</label>
+            <Button onClick={()=>{setCount(count + 1)}}> +</Button>
+            <label >{count}</label>
         </div>
     )
 }
