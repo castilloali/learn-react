@@ -1,14 +1,14 @@
-import React, {useState , useEffect} from 'react'
+import React, { useRef} from 'react'
 import { Button } from 'react-bootstrap'
 function Status() {
-    const [count,setCount]=useState(0)
-    useEffect(()=>{
-        console.log("ssss")
-    },[count])
+    const inp = useRef(null)
+    const Foucsr=()=>{
+        inp.current.focus()
+    }
     return (
         <div>
-            <Button onClick={()=>{setCount(count + 1)}}> +</Button>
-            <label >{count}</label>
+            <input type="text" ref={inp} />
+            <Button onClick={Foucsr}> +</Button>
         </div>
     )
 }
