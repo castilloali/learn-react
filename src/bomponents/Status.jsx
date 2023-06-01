@@ -1,14 +1,37 @@
-import React, { useRef} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Button } from 'react-bootstrap'
+
+import axios from 'axios'
+
+
+
+// const fechAxios = async () =>{
+//     const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+//     setstat(res.data)
+//     console.log(res.data)
+// }
+
 function Status() {
-    const inp = useRef(null)
-    const Foucsr=()=>{
-        inp.current.focus()
+
+    const [stat , setstat] = useState([])
+    useEffect(()=> {
+    async function fetchData() {
+        const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+        setstat(res.data)
+        console.log(res.data)  
     }
+
+    fetchData()
+},[])
+
+
     return (
+
         <div>
-            <input type="text" ref={inp} />
-            <Button onClick={Foucsr}> +</Button>
+            {stat.map((item)=>{
+                return (<h3>{item.title}</h3>)
+            })}
+            <Button>+</Button>
         </div>
     )
 }
